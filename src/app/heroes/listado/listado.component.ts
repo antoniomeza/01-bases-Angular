@@ -12,4 +12,10 @@ export class ListadoComponent {
     BorrarHeroe( index: number): void {
       this.heroeBorrado = this.heroes.shift() || ''
     }
+
+    get heroesBorrados(): boolean {
+      if ( this.heroeBorrado.length > 0 )
+        return true
+      return false
+    }
 }
